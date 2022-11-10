@@ -4,12 +4,12 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 export default class FuncionarioUpdateValidator {
   constructor(protected ctx: HttpContextContract) {}
   public schema = schema.create({
-    nomeFuncionario: schema.string.nullableAndOptional([
+    nome: schema.string.nullableAndOptional([
       rules.alpha({ allow: ['space'] }),
       rules.maxLength(100),
     ]),
 
-    cpf_Funcionario: schema.string.nullableAndOptional([
+    cpf: schema.string.nullableAndOptional([
       rules.unique({ table: 'alunos', column: 'id' }),
       rules.regex(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/),
     ]),
