@@ -14,6 +14,12 @@ export default class extends BaseSeeder {
         descricao: 'Os mais fortes herois da terra',
         preco: 200,
       },
+      {
+        nome: 'Watchmen',
+        descricao:
+          'Os mais fortes herois da terra. No âmbito de uma história paralela, os super-heróis são tratados como criminosos.',
+        preco: 200,
+      },
     ])
     // Write your database queries inside the run method
   }
