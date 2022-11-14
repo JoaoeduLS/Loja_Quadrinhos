@@ -6,7 +6,7 @@ export default class FuncionarioValidator {
 
   public schema = schema.create({
     nome: schema.string([rules.alpha({ allow: ['space'] }), rules.maxLength(100)]),
-
+    
     cpf: schema.string([
       rules.unique({ table: 'alunos', column: 'id' }),
       rules.regex(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/),
