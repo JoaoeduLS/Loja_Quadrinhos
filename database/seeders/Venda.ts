@@ -7,19 +7,19 @@ export default class extends BaseSeeder {
       {
         idFuncionario: 1,
         idCompra: 1,
-        idClinte: 1,
+        idCliente: 1,
         dataVenda: new Date(2022, 5, 8),
       },
       {
         idFuncionario: 2,
         idCompra: 2,
-        idClinte: 2,
+        idCliente: 2,
         dataVenda: new Date(2017, 6, 10),
       },
       {
         idFuncionario: 3,
         idCompra: 3,
-        idClinte: 3,
+        idCliente: 3,
         dataVenda: new Date(2020, 2, 8),
       },
     ])

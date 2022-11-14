@@ -15,7 +15,7 @@ export default class Venda extends BaseModel {
   public idFuncionario: number
 
   @column()
-  public idClinte: number
+  public idCliente: number
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
