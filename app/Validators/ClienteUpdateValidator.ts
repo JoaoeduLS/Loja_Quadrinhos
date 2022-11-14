@@ -18,11 +18,11 @@ export default class ClienteUpdateValidator {
     telefone: schema.string.nullableAndOptional([
       rules.regex(/^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$/),
       rules.mobile({ locale: ['pt-BR'] }),
-      rules.unique({ table: 'alunos', column: 'telefone' }),
+      rules.unique({ table: 'clientes', column: 'telefone' }),
     ]),
 
     cpf: schema.string.nullableAndOptional([
-      rules.unique({ table: 'alunos', column: 'id' }),
+      rules.unique({ table: 'clientes', column: 'cpf' }),
       rules.regex(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/),
     ]),
 
