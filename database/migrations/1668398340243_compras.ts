@@ -6,9 +6,15 @@ export default class extends BaseSchema {
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.integer('id_HQ').notNullable()
-      table.string('bloco', 100).notNullable()
-      table.string('tipoDeCapa', 50).notNullable()
+      table
+        .integer('id_hq')
+        .unsigned()
+        .references('id')
+        .inTable('produtos')
+        .notNullable()
+        .onDelete('CASCADE')
+      table.string('bloco', 100)
+      table.string('tipo_de_capa', 50).notNullable()
       table.string('editora', 50).notNullable()
 
       table.timestamp('created_at', { useTz: true })

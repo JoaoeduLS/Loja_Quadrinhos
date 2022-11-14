@@ -8,7 +8,7 @@ export default class extends BaseSchema {
       table.increments('id')
       table.string('nome', 100).notNullable()
       table.integer('preco', 10000).notNullable()
-      table.string('descricao', 700).notNullable()
+      table.text('descricao').notNullable()
 
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL

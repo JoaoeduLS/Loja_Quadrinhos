@@ -20,7 +20,7 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.resource('/cliente', 'ClientesController')
+Route.resource('/clientes', 'ClientesController')
 Route.resource('/funcionarios', 'FuncionariosController')
 Route.resource('/produtos', 'ProdutosController')
 Route.resource('/vendas', 'VendasController')

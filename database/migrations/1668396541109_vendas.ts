@@ -6,10 +6,28 @@ export default class extends BaseSchema {
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.integer('id_compra').notNullable()
+      table
+        .integer('id_compra')
+        .unsigned()
+        .references('id')
+        .inTable('compras')
+        .notNullable()
+        .onDelete('CASCADE')
+      table
+        .integer('id_funcionario')
+        .unsigned()
+        .references('id')
+        .inTable('funcionarios')
+        .notNullable()
+        .onDelete('CASCADE')
+      table
+        .integer('id_cliente')
+        .unsigned()
+        .references('id')
+        .inTable('clientes')
+        .notNullable()
+        .onDelete('CASCADE')
       table.date('data_venda').notNullable()
-      table.integer('id_funcionario').notNullable()
-      table.integer('id_cliente').notNullable()
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
