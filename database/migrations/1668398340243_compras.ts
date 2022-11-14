@@ -11,9 +11,6 @@ export default class extends BaseSchema {
       table.string('tipoDeCapa', 50).notNullable()
       table.string('editora', 50).notNullable()
 
-      /**
-       * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
-       */
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })
