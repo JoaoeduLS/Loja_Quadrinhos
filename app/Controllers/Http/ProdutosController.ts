@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/explicit-member-accessibility */
 
-import Produto from "App/Models/Produto"
-import ProdutoValidator from "App/Validators/ProdutoValidator"
+import Produto from 'App/Models/Produto'
+import ProdutoValidator from 'App/Validators/ProdutoValidator'
+import ProdutoUpdateValidator from 'App/Validators/ProdutoUpdateValidator'
 
 export default class ProdutosController {
   async index() {
