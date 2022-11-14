@@ -3,6 +3,7 @@
 
 import Venda from 'App/Models/Venda'
 import VendaValidator from 'App/Validators/VendaValidator'
+import VendaUpdateValidator from 'App/Validators/VendaUpdateValidator'
 
 export default class VendasController {
   async index() {
@@ -24,7 +25,7 @@ export default class VendasController {
   async update({ request }) {
     const id = request.param('id')
     const venda = await Venda.findOrFail(id)
-    const dados = await request.validate(VendasUpdateValidator)
+    const dados = await request.validate(VendaUpdateValidator)
     await venda.merge(dados).save()
 
     return venda

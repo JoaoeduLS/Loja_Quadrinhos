@@ -9,12 +9,12 @@ export default class VendaValidator {
       rules.exists({ table: 'compras', column: 'id' }),
     ]),
     idFuncionario: schema.number([
-      rules.unique({ table: 'clientes', column: 'id' }),
-      rules.exists({ table: 'clientes', column: 'id' }),
+      rules.unique({ table: 'funcionarios', column: 'id' }),
+      rules.exists({ table: 'funcionarios', column: 'id' }),
     ]),
     idCliente: schema.number([
-      rules.unique({ table: 'compras', column: 'id' }),
-      rules.exists({ table: 'compras', column: 'id' }),
+      rules.unique({ table: 'clientes', column: 'id' }),
+      rules.exists({ table: 'clientes', column: 'id' }),
     ]),
     dataVenda: schema.date({ format: 'yyyy-MM-dd' }),
   })
