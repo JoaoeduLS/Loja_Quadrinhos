@@ -5,9 +5,9 @@ export default class FuncionarioValidator {
   constructor(protected ctx: HttpContextContract) {}
 
   public schema = schema.create({
-    nomeFuncionario: schema.string([rules.alpha({ allow: ['space'] }), rules.maxLength(100)]),
+    nome: schema.string([rules.alpha({ allow: ['space'] }), rules.maxLength(100)]),
 
-    cpf_Funcionario: schema.string([
+    cpf: schema.string([
       rules.unique({ table: 'alunos', column: 'id' }),
       rules.regex(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/),
     ]),

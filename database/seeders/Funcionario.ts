@@ -5,21 +5,21 @@ export default class extends BaseSeeder {
   public async run() {
     await Funcionario.createMany([
       {
-        nomeFuncionario: 'Joao Eduardo',
+        nome: 'Joao Eduardo',
         telefone: '(61) 8639-5265 ',
-        cpf_Funcionario: '077-152-081.17',
+        cpf: '077-152-081.17',
         cargo: 'balconista',
       },
       {
-        nomeFuncionario: 'Joao Eduardo',
+        nome: 'Joao Eduardo',
         telefone: '(61) 8639-5265 ',
-        cpf_Funcionario: '077-152-081.17',
+        cpf: '077-152-081.17',
         cargo: 'balconista',
       },
       {
-        nomeFuncionario: 'Joao Eduardo',
+        nome: 'Joao Eduardo',
         telefone: '(61) 8639-5265 ',
-        cpf_Funcionario: '077-152-081.17',
+        cpf: '077-152-081.17',
         cargo: 'balconista',
       },
     ])
