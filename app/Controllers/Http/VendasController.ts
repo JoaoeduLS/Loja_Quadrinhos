@@ -20,7 +20,8 @@ export default class VendasController {
   async destroy({ request }) {
     const id = request.param('id')
     const venda = await Venda.findOrFail(id)
-    return await venda.delete()
+    await venda.delete()
+    return { mensagem: 'Venda Deletado' }
   }
   async update({ request }) {
     const id = request.param('id')

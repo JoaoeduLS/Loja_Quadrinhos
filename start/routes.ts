@@ -20,8 +20,8 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.resource('/clientes', 'ClientesController')
-Route.resource('/funcionarios', 'FuncionariosController')
-Route.resource('/produtos', 'ProdutosController')
-Route.resource('/vendas', 'VendasController')
-Route.resource('/compras', 'ComprasController')
+Route.resource('/clientes', 'ClientesController').apiOnly()
+Route.resource('/funcionarios', 'FuncionariosController').apiOnly()
+Route.resource('/produtos', 'ProdutosController').apiOnly()
+Route.resource('/vendas', 'VendasController').apiOnly()
+Route.resource('/compras', 'ComprasController').apiOnly()

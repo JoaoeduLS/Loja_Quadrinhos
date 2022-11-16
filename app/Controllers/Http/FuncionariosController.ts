@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /*eslint-disable @typescript-eslint/explicit-member-accessibility*/
 
 import Funcionario from 'App/Models/Funcionario'
@@ -19,7 +20,8 @@ export default class FuncionariosController {
   async destroy({ request }) {
     const id = request.param('id')
     const funcionario = await Funcionario.findOrFail(id)
-    return await funcionario.delete()
+    await funcionario.delete()
+    return { mensagem: 'Cliente Deletado' }
   }
   async update({ request }) {
     const id = request.param('id')

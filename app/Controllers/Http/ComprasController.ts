@@ -19,7 +19,8 @@ export default class ComprasController {
   async destroy({ request }) {
     const id = request.param('id')
     const compra = await Compra.findOrFail(id)
-    return await compra.delete()
+    await compra.delete()
+    return { mensagem: 'Compra Deletado' }
   }
   async update({ request }) {
     const id = request.param('id')

@@ -19,7 +19,8 @@ export default class ProdutosController {
   async destroy({ request }) {
     const id = request.param('id')
     const produto = await Produto.findOrFail(id)
-    return await produto.delete()
+    await produto.delete()
+    return { mensagem: 'Produto Deletado' }
   }
   async update({ request }) {
     const id = request.param('id')
