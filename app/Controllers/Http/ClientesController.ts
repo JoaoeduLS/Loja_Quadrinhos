@@ -17,10 +17,17 @@ export default class ClientesController {
     const id = request.param('id')
     return await Cliente.findOrFail(id)
   }
-  async destroy({ request }) {
+  /*async destroy({ request }) {
     const id = request.param('id')
     const cliente = await Cliente.findOrFail(id)
+    await Cliente.delete()
     return await cliente.delete()
+  }*/
+  async destroy({ request }) {
+    const id = request.param('id')
+    const clinte = await Cliente.findByOrFail(id)
+    await clinte.delete()
+    return { mensagem: 'Cliente Deletado' }
   }
   async update({ request }) {
     const id = request.param('id')
